@@ -14,4 +14,9 @@ public abstract class Empleado {
 	public boolean esElAniversario() {
 		return ChronoUnit.DAYS.between(this.fechaIngreso,LocalDate.now())%365 == 0;
 	}
+	
+	
+	public void setSueldoBasico(Double s) {
+		this.sueldoBasico=s;
+	}
 }

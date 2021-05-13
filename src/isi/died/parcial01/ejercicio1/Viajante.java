@@ -1,6 +1,7 @@
 package isi.died.parcial01.ejercicio1;
 
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -8,6 +9,11 @@ public class Viajante extends Empleado {
 	
 	private List<Gasto> listaDeGastos;
 	private List<Venta> listaDeVentas;
+	
+	public Viajante() {
+		listaDeGastos = new ArrayList<Gasto>();
+		listaDeVentas = new ArrayList<Venta>();
+	}
 	
 	public Double calcularSueldo() {
 		Double bonus=1d;

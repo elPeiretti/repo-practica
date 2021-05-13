@@ -5,6 +5,7 @@ import java.time.LocalDate;
 public class Venta {
 	private LocalDate fechaDeVenta;
 	private Double valorTotal;
+	
 	public Double getValorTotal() {
 		return valorTotal;
 	}

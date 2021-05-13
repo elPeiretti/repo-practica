@@ -1,12 +1,16 @@
 package isi.died.parcial01.ejercicio1;
 
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
 public class Operario extends Empleado{
 	private List<Viajante> viajantesAtendidos;
 	
+	public Operario() {
+		viajantesAtendidos = new ArrayList<Viajante>();
+	}
 	
 	public Double calcularSueldo() {
 		Double bonus=1d;
