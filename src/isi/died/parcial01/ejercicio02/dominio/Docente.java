@@ -13,6 +13,11 @@ public class Docente {
 	private Cargo cargo;
 	private List<Materia> catedras;
 	private List<Inscripcion> inscriptos;
+	
+	public List<Inscripcion> getInscriptos() {
+		return inscriptos;
+	}
+
 	private List<Examen> examenes;
 	
 	public Docente() {

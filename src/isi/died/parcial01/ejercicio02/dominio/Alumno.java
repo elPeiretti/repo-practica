@@ -11,6 +11,11 @@ public class Alumno {
 	private String nombre;
 
 	private List<Inscripcion> materiasCursadas;
+	
+	public List<Inscripcion> getMateriasCursadas() {
+		return materiasCursadas;
+	}
+
 	private List<Examen> examenes;
 	
 	public Alumno() {

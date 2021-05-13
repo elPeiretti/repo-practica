@@ -13,6 +13,7 @@ public class Materia {
 	private List<Examen> examenes;
 	private List<Materia> correlativasCursada;
 	private List<Materia> correlativasRendir;
+	private Integer cupoMaximo;
 	
 	public Materia() {
 		this.id = ID_GENERATOR++;
@@ -79,5 +80,10 @@ public class Materia {
 	
 	public void addCorrelativaCursada(Materia m) {
 		this.correlativasCursada.add(m);
+	}
+	
+	public Integer getCupoRestante() {
+		Integer ans =this.cupoMaximo-this.inscripciones.size();
+		return ans>0 ? ans:0;
 	}
 }

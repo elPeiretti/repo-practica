@@ -18,7 +18,7 @@ public interface MySysAcad {
 	 * asigna la inscripcion a la lista de inscripciones del alumno, 
 	 * de la materia y del docente
 	 */
-	public void inscribirAlumnoCursada(Docente d,Alumno a, Materia m,Integer cicloLectivo);
+	public void inscribirAlumnoCursada(Docente d,Alumno a, Materia m,Integer cicloLectivo) throws NoSePudoInscribirException, MateriaConCupoLlenoException;
 
 	/**
 	 * crea una nueva instancia de Inscripcion y 
