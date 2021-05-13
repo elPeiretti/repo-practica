@@ -6,4 +6,10 @@ public class ReciboDeSueldo {
 	private Integer mes;
 	private Double valorTotal;
 	private Empleado empleado;
+	public Empleado getEmpleado() {
+		return empleado;
+	}
+	public void setEmpleado(Empleado empleado) {
+		this.empleado = empleado;
+	}
 }
