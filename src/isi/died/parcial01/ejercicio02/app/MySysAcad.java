@@ -27,5 +27,7 @@ public interface MySysAcad {
 	 */
 	public void inscribirAlumnoExamen(Docente d,Alumno a, Materia m);
 	
+	
+	public Double promedioAprobados(Materia m);
 
 }

@@ -6,7 +6,6 @@ import java.util.stream.Collectors;
 
 import isi.died.parcial01.ejercicio02.db.BaseDeDatos;
 import isi.died.parcial01.ejercicio02.db.BaseDeDatosExcepcion;
-import isi.died.parcial01.ejercicio02.dominio.NoSePudoInscribirException;
 import isi.died.parcial01.ejercicio02.dominio.Inscripcion.Estado;
 import isi.died.parcial01.ejercicio02.dominio.*;
 
@@ -85,6 +84,15 @@ public class MySysAcadImpl implements MySysAcad {
 			cursadas.get(cursadas.size()-1).setEstado(Estado.PROMOCIONADO);
 					
 		}
+	}
+
+
+	@Override
+	public Double promedioAprobados(Materia m) {
+		List<Examen> aprobados = m.getExamenes().stream().filter(e -> e.getNota()>5).collect(Collectors.toList());
+		return (double) aprobados.stream()
+						.map(e -> e.getNota())
+						.collect(Collectors.summingInt(Integer::intValue)) / (double) aprobados.size();
 	}
 
 }
