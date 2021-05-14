@@ -53,5 +53,9 @@ public class Alumno {
 		this.materiasCursadas.add(e);
 		e.setInscripto(this);
 	}
+	
+	public List<Inscripcion> getCursadas() {
+		return this.materiasCursadas;
+	}
 
 }
