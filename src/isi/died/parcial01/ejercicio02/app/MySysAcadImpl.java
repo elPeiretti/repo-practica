@@ -95,4 +95,12 @@ public class MySysAcadImpl implements MySysAcad {
 						.collect(Collectors.summingInt(Integer::intValue)) / (double) aprobados.size();
 	}
 
+	
+	public List<Alumno> inscriptos(Materia m, Integer ciclo){
+		return m.getInscripciones().stream()
+							.map(t -> t.getInscripto())
+							.sorted((a,b) -> a.getNombre().compareTo(b.getNombre()))
+							.collect(Collectors.toList());
+	}
+	
 }
